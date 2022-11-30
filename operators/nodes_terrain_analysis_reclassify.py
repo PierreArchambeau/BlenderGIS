@@ -709,7 +709,7 @@ class RECLASS_OT_quick_gradient(Operator):
 		self.initPreview(context)
 		#Show dialog with operator properties
 		wm = context.window_manager
-		return wm.invoke_props_dialog(self, width=200, height=200)
+		return wm.invoke_props_dialog(self) #, width=200)
 
 	def draw(self, context):
 		layout = self.layout
@@ -828,7 +828,7 @@ class RECLASS_OT_svg_gradient(Operator):
 		self.updatePreview(context)
 		#Show dialog with operator properties
 		wm = context.window_manager
-		return wm.invoke_props_dialog(self, width=200, height=200)
+		return wm.invoke_props_dialog(self) #, width=200)
 
 	def draw(self, context):#layout for invoke props modal dialog
 		#operator.draw() is different from panel.draw()
@@ -906,7 +906,7 @@ class RECLASS_OT_export_svg(Operator):
 	def invoke(self, context, event):
 		#Show dialog with operator properties
 		wm = context.window_manager
-		return wm.invoke_props_dialog(self, width=250, height=200)
+		return wm.invoke_props_dialog(self) #, width=250)
 
 	def draw(self, context):
 		layout = self.layout
